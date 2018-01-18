@@ -1,0 +1,55 @@
+{
+    "epochs": 200,
+    "epoch_tolerance":100,
+    "valid_frequency":1,
+    "load_params": null,
+    "load_config": null,
+    "dataset_train":
+    {
+	"dts0":
+	{
+	    "datafile": "/home/guglielmo/vocal_interactions_machine_bird_database_sounds/dataBirdTrashNN.pkl.gz",
+	    "n_valid_samples":50,
+	    "n_test_samples":50,
+	    "batch_size":2,
+	    "n_classes":2
+	}
+    },
+    "hidden_layer0":
+    {
+	"order_of_decorators": ["decoratorInputLayer"],
+	"decoratorInputLayer":
+	{
+	    "input_dimensions": [1, 1955]
+	},
+	"activation": "sigmoid",
+	"n_node": 300,
+	"decoratorFixedLearnRate":
+	{
+	    "fixed_learning_rate": 0.001
+	},
+	"decoratorL1L2":
+	{
+	    "L1":1e-3,
+	    "L2":0
+	}
+    },
+    "output_layers":
+    {
+	"output0":
+	{
+	    "n_node": 2,
+	    "activation": "softmax",
+	    "datafile": "/home/guglielmo/vocal_interactions_machine_bird_database_sounds/dataBirdTrashNN.pkl.gz",
+	    "decoratorFixedLearnRate":
+	    {
+		"fixed_learning_rate":0.001
+	    },
+	    "decoratorL1L2":
+	    {
+		"L1":1e-4,
+		"L2":0
+	    }
+	}
+    }
+}

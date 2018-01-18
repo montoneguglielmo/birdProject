@@ -51,6 +51,7 @@ if __name__ == '__main__':
         for call in bird:
            min_shape = min(min_shape, call.shape[0])
            
+           
     dataset = []           
     for bird in bt:
         dt = []
@@ -79,9 +80,8 @@ if __name__ == '__main__':
 
     dataBirdTrash = {}
     for nm, dt in zip(nameBirdsTrash, dataset):
-        print nm
         dataBirdTrash[nm] = dt
 
 
-    with gzip.open('dataBirdTrash.pkl.gz', 'wb') as f:
-        pickle.dump(dataBirdTrash, f, protocol=pickle.HIGHEST_PROTOCOL)
+    #with gzip.open('dataBirdTrash.pkl.gz', 'wb') as f:
+    #    pickle.dump(dataBirdTrash, f, protocol=pickle.HIGHEST_PROTOCOL)

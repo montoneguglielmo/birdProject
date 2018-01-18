@@ -1,0 +1,83 @@
+{
+    "epochs": 100, 
+    "epoch_tolerance": 100, 
+    "valid_frequency": 1, 
+    "load_params": null, 
+    "load_config": null, 
+    "dataset_train": {
+        "dts0": {
+            "datafile": "/home/guglielmo/vocal_interactions_machine_bird_database_sounds/dataBirdTrashNN.pkl.gz", 
+            "n_valid_samples": 50, 
+            "n_test_samples": 50, 
+            "batch_size": 2, 
+            "n_classes": 2, 
+            "n_samples": 100
+        }
+    }, 
+    "hidden_layer0": {
+        "decoratorL1L2": {
+            "L2": 0.0, 
+            "L1": 0.0010000000474974513
+        }, 
+        "activation": null, 
+        "decoratorInputLayer": {
+            "input_dimensions": [
+                1, 
+                1955
+            ]
+        }, 
+        "n_node": 300, 
+        "order_of_decorators": [
+            "decoratorInputLayer", 
+            "decoratorFixedLearnRate", 
+            "decoratorL1L2"
+        ], 
+        "decoratorFixedLearnRate": {
+            "fixed_learning_rate": 0.0010000000474974513
+        }
+    }, 
+    "output_layers": {
+        "output0": {
+            "datafile": "/home/guglielmo/vocal_interactions_machine_bird_database_sounds/dataBirdTrashNN.pkl.gz", 
+            "decoratorL1L2": {
+                "L2": 0.0, 
+                "L1": 9.999999747378752e-05
+            }, 
+            "activation": "softmax", 
+            "n_node": 2, 
+            "order_of_decorators": [
+                "decoratorFixedLearnRate", 
+                "decoratorL1L2"
+            ], 
+            "decoratorFixedLearnRate": {
+                "fixed_learning_rate": 0.0010000000474974513
+            }
+        }
+    }, 
+    "name": "/home/guglielmo/multi_classifier/180437", 
+    "result": {
+        "test_dts": {
+            "test_score": [], 
+            "name": []
+        }, 
+        "train_dts": {
+            "train_cost": [
+                12.44930072784424
+            ], 
+            "test_score": [
+                0.0
+            ], 
+            "train_score": [
+                0.0
+            ], 
+            "valid_score": [
+                2.0
+            ], 
+            "name": [
+                "/home/guglielmo/vocal_interactions_machine_bird_database_sounds/dataBirdTrashNN.pkl.gz"
+            ]
+        }, 
+        "runnig_time": 44.41076588630676, 
+        "epoch": 100
+    }
+}
